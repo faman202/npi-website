@@ -113,27 +113,16 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:#1565c0;box-sh
     <!-- HOME PAGE -->
     <div id="page-home" class="page active">
      <!-- Banner Slideshow -->
-     <div class="slide-banner relative" id="banner-container">
-    <div id="banner-slides"></div>
-    
-    <button onclick="deleteBanner()" 
-            class="absolute top-4 right-4 z-50 bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 transition-all"
-            title="ব্যানার বন্ধ করুন">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-    </button>
-
-    <div class="slide-overlay">
-        <div id="banner-title-bn" style="font-size:24px;font-weight:700">
-            ন্যাশনাল পলিটেকনিক ইন্সটিটিউট, মানিকগঞ্জ
-        </div>
-        <div id="banner-slogan" style="color:#ffa726;font-size:14px;margin-top:4px">
-            একটাই লক্ষ্য হতে হবে দক্ষ
-        </div>
-    </div>
-</div>
+     <div class="slide-banner" id="banner-container">
+      <div id="banner-slides"></div>
+      <div class="slide-overlay">
+       <div id="banner-title-bn" style="font-size:24px;font-weight:700">
+        ন্যাশনাল পলিটেকনিক ইন্সটিটিউট, মানিকগঞ্জ
+       </div>
+       <div id="banner-slogan" style="color:#ffa726;font-size:14px;margin-top:4px">
+        একটাই লক্ষ্য হতে হবে দক্ষ
+       </div>
+      </div>
       <div style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;gap:8px">
        <button onclick="prevSlide()" style="background:rgba(255,255,255,.3);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;backdrop-filter:blur(4px)"><i data-lucide="chevron-left" style="width:18px;height:18px"></i></button> <button onclick="nextSlide()" style="background:rgba(255,255,255,.3);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;backdrop-filter:blur(4px)"><i data-lucide="chevron-right" style="width:18px;height:18px"></i></button>
       </div><!-- Banner Management --> <button onclick="document.getElementById('banner-upload').click()" style="position:absolute;top:12px;right:12px;z-index:3;background:rgba(0,0,0,.5);border:none;color:#fff;padding:8px 14px;border-radius:8px;cursor:pointer;font-size:12px;font-family:inherit;backdrop-filter:blur(4px)"><i data-lucide="plus" style="width:14px;height:14px;vertical-align:middle"></i> <span data-bn="ব্যানার যোগ করুন" data-en="Add Banner">ব্যানার যোগ করুন</span></button> <input type="file" id="banner-upload" accept="image/*" style="display:none" onchange="addBannerImage(this)">
